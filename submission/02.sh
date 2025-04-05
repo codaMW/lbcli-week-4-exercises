@@ -20,7 +20,7 @@ utxo_vout_2_value=$(bitcoin-cli -regtest decoderawtransaction $transaction | jq 
 
 
 
-lockd=$(bitcoin-cli -regtest -named createrawtransaction inputs="[ { \"txid\": \"$txn_id\", \"vout\": $utxo_vout_1 }, { \"txid\": \"$txn_id\", \"vout\": $utxo_vout_2 } ]" outputs="{ \"$recipient\": 0.20000000 }" locktime=2016)
+lockd=$(bitcoin-cli -regtest -named createrawtransaction inputs="[ { \"txid\": \"$txn_id\", \"vout\": $utxo_vout_1 }, { \"txid\": \"$txn_id\", \"vout\": $utxo_vout_2 } ]" outputs="{ \"$recipient\": 0.20000000 }" locktime=2041)
 
 echo "$lockd"
 
